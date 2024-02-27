@@ -1,10 +1,18 @@
-/* const express = require("express"); */ //Utiliza commontJS
 
 import express from 'express' // Utiliza EM6
 import usuarioRoutes from "./routes/usuarioRoutes.js"
+import db from "./config/db.js"
 
 // Crear la app
 const app = express();
+
+// Conexion a la base de datos
+try {
+    await db.authenticate();
+    console.log("Conexion Correcta a la base de datos")
+} catch (error) {
+    console.log(error)
+}
 
 // Habilitar Pug
 app.set("view engine", "pug")
