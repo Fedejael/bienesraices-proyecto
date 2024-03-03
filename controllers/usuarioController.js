@@ -65,6 +65,7 @@ const formularioOlvidePassword = (req, res) => {
     res.render("auth/olvide-password", {
         pagina: "Repura tu acceso a Bienes Raices"
     })
+    
 }
 
 export{
