@@ -59,13 +59,18 @@ const registrar = async (req, res) => {
         password,
         token: generarId()
     })
+
+        // Mostar mensaje de confirmacion
+        res.render("templates/mensaje", {
+            pagina: "Cuenta creada correctamente",
+            mensaje: "Hemos enviado un email de confirmaciónm presiona en el enlace"
+        })
 }
 
 const formularioOlvidePassword = (req, res) => {
     res.render("auth/olvide-password", {
         pagina: "Repura tu acceso a Bienes Raices"
     })
-    
 }
 
 export{
