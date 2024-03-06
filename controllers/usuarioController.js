@@ -70,6 +70,7 @@ const registrar = async (req, res) => {
 
 
     // Mostar mensaje de confirmacion
+    
     res.render("templates/mensaje", {
         pagina: "Cuenta creada correctamente",
         mensaje: "Hemos enviado un email de confirmaciónm presiona en el enlace"
